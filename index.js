@@ -19,10 +19,6 @@ const getFilms = async (name) => {
     imgBaseUrl = conf.data.images.base_url;
     imgSizes = conf.data.images.backdrop_sizes;
     paintFilms(res.data.results);
-    console.log(res);
-    console.log(conf);
-    console.log(imgBaseUrl);
-    console.log(imgSizes);
   } catch (e) {
     console.log(e);
   }
