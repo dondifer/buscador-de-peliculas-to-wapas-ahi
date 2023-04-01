@@ -36,8 +36,11 @@ const paintFilms = (films) => {
   cardSection.innerHTML = ``;
   films.forEach((film) => {
     let badges = "";
-    film.genresName.forEach((el) => {
-      badges += `<span class="badge rounded-pill bg-dark">${el.name}</span>`;
+    film.genresName.forEach((el, index) => {
+      badges +=
+        index % 2 === 0
+          ? `<span class="badge rounded-pill bg-secondary">${el.name}</span>`
+          : `<span class="badge rounded-pill bg-dark">${el.name}</span>`;
     });
     if (film.backdrop_path) {
       cardSection.innerHTML +=
