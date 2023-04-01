@@ -46,7 +46,7 @@ const paintFilms = (films) => {
   <div class="card-body">
     <h4 class="card-title">${film.original_title}</h4>
     <img class="w-80" src="${imgBaseUrl}${imgSizes[0]}${film.backdrop_path}"/>
-    <p class="card-text">${film.overview}</p>` +
+    <p class="card-text" style="overflow: hidden;text-overflow: ellipsis;display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;">${film.overview}</p>` +
         `${badges}` +
         ` </div>
 </div>`;
